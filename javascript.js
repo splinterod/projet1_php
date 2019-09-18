@@ -37,29 +37,33 @@ function apparitionMenuBurger()
 
 
 
-   /**
-    * event.target.id != "image_menuburger" || 
-  var visible = $('#div_burger_menu').css("visibility") == "visible"; 
-  un mélange de jquery et javascript dans une fct !!! SUPER BEAU !!!!! 
+ // redimensionnement des marges haut et bas du header en fontion de la largeur de la page
+window.addEventListener("resize", displayWindowSize);
+window.onload = function() {
+  displayWindowSize()
+  }
 
-  if ($('#div_burger_menu').css("visibility") == "visible") {
-    $('#div_burger_menu').css("visibility","hidden");
-    /** alert('on cache bruger menu'); 
+function displayWindowSize(){
+
+  // Get width and height of the window excluding scrollbars
+
+  var w = document.documentElement.clientWidth;
+  var marge = 0;
+  
+
+
+  if (w <= 1010) {
+    $('header').css("margin-top","00px");
+} else {
+  marge ="" + Math.round((w-1010) /13)+ "px";
+  // Display result inside a div element
+  $('header').css("margin-top",marge);
+  $('header').css("margin-bottom",marge);
 }
-else
-{
-  /**  On affiche burger menu
-  $('#div_burger_menu').css("visibility","visible");
-
-
- /** animation de l'apparition du bruger menu  
-document.getElementById("#div_burger_menu").animate([
-  {opacity: '0'},
-  {opacity: '1'}
-], 1000);
-document.getElementById("#div_burger_menu").style.opacity = '1';
 }
-*/ 
+  
+  
+
 
 
 
