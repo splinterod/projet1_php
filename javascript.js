@@ -8,21 +8,34 @@
 */
 
 
-function apparitionSection()
+function apparitionMenuBurger()
 {
-  /** clic sur page pour fermer menu burger */
-  /** eleement parents et tout ces enfants */
-  if (event.target.id != "div_burger_menu" || $(".child-element").parents("#main-nav").length == 1 ) {
+  $('#div_burger_menu').css("visibility","visible");
+}
 
-    $('#div_burger_menu').css("visibility","hidden");
-  }  
+ 
 
-  /**clic sur menu burger */
-  if (event.target.id === "image_menuburger" ) {
-    $('#div_burger_menu').css("visibility","visible");
-  }  
+ document.addEventListener("click", (evt) => {
+  const flyoutElement = document.getElementById("div_burger_menu");
+  let targetElement = evt.target; // clicked element
 
-  
+  if (targetElement.id != "image_menuburger") {
+      do {
+          if (targetElement == flyoutElement) {
+              // This is a click inside. Do nothing, just return.
+              return;
+          }
+          // Go up the DOM
+          targetElement = targetElement.parentNode;
+      } while (targetElement);
+
+      // This is a click outside.
+      $('#div_burger_menu').css("visibility","hidden");
+  }
+});
+
+
+
 
    /**
     * event.target.id != "image_menuburger" || 
@@ -47,7 +60,7 @@ document.getElementById("#div_burger_menu").animate([
 document.getElementById("#div_burger_menu").style.opacity = '1';
 }
 */ 
-}
+
 
 
 

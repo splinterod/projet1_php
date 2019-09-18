@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+   box-sizing: border-box;
    margin:0px;
    padding:0px;
   }
@@ -10,17 +10,33 @@
   }
 /*css header par julien */
   /*div du burger menu */
+
   #div_burger_menu {
-    width: 150px;
-    height: 300px;
+    width: 300px;
+    height: 500px;
+    border: solid 2px greenyellow;
+    border-radius: 1em;
+    box-shadow: 0px 0px 15px #333;
     background-color: white;
-    border: solid 1px black;
     position: absolute;
     top:50px;
     left: 0px;
-    text-align: center;
+    
     visibility: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
+
+  #div_burger_menu h3 {
+    border-bottom: solid 1px greenyellow;
+  }
+
+  #div_burger_menu li {
+    margin-top:20px;
+  }
+
+
+
+  /*sytyle interne au menu burger */
 
 
 
@@ -29,15 +45,11 @@
   }
   header {
 
-    border: solid 2px greenyellow;
-    border-radius: 1em;
-    box-shadow: 0px 0px 15px #333;
-
       width:100%;
       height: auto;
       max-height:150px;
-      background-image: url("Images/fond_header_haut_clair.png");
       background-position: center;
+      background: linear-gradient(to right, rgba(255,255,255,0) 20%,  rgba(255,255,255,1) , rgba(255,255,255,0) 80% , rgba(255,255,255,1) 90% ), url("Images/fond_header_haut.jpg");
       display:flex;
       align-items:center;
       justify-content: space-around;
@@ -49,12 +61,15 @@
     
     text-align: center;
     
+  }
 
+  .header_vide {
+    width: 10px;
   }
 
 .logo_header {
-  max-width:70%;
-  max-height: 70%;
+  max-width:80%;
+  max-height: auto;
   min-width: 150px;
   min-height: auto;
 }
@@ -69,7 +84,7 @@
 #header_user_info
 {
   
-  color: black;
+  
   text-align: center;
   font-weight: bold;
   
@@ -81,8 +96,10 @@
 }
 
 .div_usr_infos {
+  color: black;
   width: 100%;
   font-weight: bold;
+  
 }
 
 /* fin css header par julien */
@@ -124,7 +141,7 @@
   #formulaire {
     margin-top: 1em;
     height: 60px;
-    color:black);
+    color:black;
     font: 20px sans-serif;
     width: 100%;
   }  
@@ -186,64 +203,45 @@
 
   /* fin SECTION BANIERE */
 
-  /* Ddébut de section CENTRALE par thierry */
+  /* Début de section CENTRALE par thierry */
 
-.centrale img {
-  width: 50%;
-  width: 3em;
-  height: 3em;
-}
- 
+#centrale_container {
+  
+   width:100%
+  }
 
-#but {
-  border: solid 2px greenyellow;
-    border-radius: 1em;
-    box-shadow: 0px 0px 15px #333;
-  width: 100%;
-  font-size: 30px;
-  text-align: center;
+
+.image_section_centrale img {
+  width: 33%;
+  height: auto;
 }
 
-
-#actions{
-  
-  border: solid 2px greenyellow;
-    border-radius: 1em;
-    box-shadow: 0px 0px 15px #333;
-  width: 100%;
-  margin-left: 0;
-  font-size: 30px;
-  
-  text-align: center;
-  
+/* affichage logo sous article*/
+.logo_article_centrale 
+{
+  width: 90px;
+  height: auto;
+  margin: 30px 0;
 }
 
-
-
-#témoignages {
-  
-  border: solid 2px greenyellow;
-    border-radius: 1em;
-    box-shadow: 0px 0px 15px #333;
-  width: 100%;
-  margin-left: 0;
-  font-size: 30px;
+.article_section_centrale p {
+  font-size: 20px;
   text-align: center;
-
+  text-justify:inter-word;
+  margin-left:8px;
+  margin-right:8px;
 }
 
+.article_section_centrale {
+  
+ text-align: center;
+}
 
-.article {
-  text-align: center;
-  font-size: 30px;
-} 
-
-h2 {
+h1 {
+  font-size: 23px;
   width: 100%;
-  height: 50px;
+  height: 20px;
   color: black;
-  background-image: url("Images/fond_header_haut_clair.png");
-  margin: 0;
   text-align: center;
 }
   
@@ -318,6 +316,9 @@ br{
 
 @keyframes animation_logo{
     0% {
+        transform: translateY(0px);
+    }
+    50% {
         transform: translateY(5px);
     }
     100% {
@@ -331,10 +332,16 @@ footer img:hover{
    
 /* fin animation section footer */
 
-  /* media query taille inf à 768 px */
-  @media screen and (min-width: 768px) {
+  
+  /* media query grand ecran Thierry*/
+
+
+    .header_vide {
+      width: 25%;
+    }
 
 /* media query grand ecran Thierry*/
+
 
 
 br {
@@ -348,36 +355,40 @@ br {
   background-image: url("Images/fond_header_haut_clair.png");
 }
 
-.centrale {
-  width: 100%;
-  margin: 40px 0;
-  text-align:center;
-}
 
-.but {
-  width: 100%;
-  font-size: 40px;
-  margin-left: 10px;
-  
-}
-  
-.actions {
-  width: 100%;
-  font-size: 40px;
-}
-
-.témoignages {
-  width: 100%;
-  font-size: 40px;
-  margin-right: 10px;
-  
-}
-
-.container {
-  display:flex;
-  clear:both;
-  
-}
-
-
+  .image_section_centrale img {
+    width: 100%;
+    height: auto;
   }
+
+/* affichage logo sous article*/
+
+  .logo_article_centrale{
+    width: 90px;
+    height: auto;
+    margin: 30px 0;
+  }
+
+  .article_section_centrale p {
+    font-size: 20px;
+    text-align: center;
+    text-justify:inter-word;
+    margin-left:8px;
+    margin-right:8px;
+  }
+
+/*class principale*/
+
+  .article_section_centrale {
+  
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 23px;
+    width: 100%;
+    height: 20px;
+    color: black;
+    text-align: center;
+  }
+  
