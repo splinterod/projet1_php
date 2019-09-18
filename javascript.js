@@ -11,13 +11,16 @@
 function apparitionMenuBurger()
 {
   $('#div_burger_menu').css("visibility","visible");
-}
 
+  $('#div_burger_menu').animate({left: '300px'});
  
+ 
+}
 
  document.addEventListener("click", (evt) => {
   const flyoutElement = document.getElementById("div_burger_menu");
   let targetElement = evt.target; // clicked element
+  let TargetElmentMenu = targetElement;
 
   if (targetElement.id != "image_menuburger") {
       do {
@@ -30,7 +33,13 @@ function apparitionMenuBurger()
       } while (targetElement);
 
       // This is a click outside.
+      
       $('#div_burger_menu').css("visibility","hidden");
+
+    //  if (TargetElmentMenu.id == "Menu_gauche") {
+    //    $("#panel").slideDown("slow");
+   //  }
+
   }
 });
 
@@ -61,7 +70,13 @@ function displayWindowSize(){
   $('header').css("margin-bottom",marge);
 }
 }
-  
+ 
+// menu deroulant version desktop
+$(document).ready(function(){
+  $("#menu-deskotp").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
   
 
 
