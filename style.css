@@ -6,6 +6,7 @@
 
   body {
       width:100%;
+      font-family: Roboto, 'Times New Roman', Times, serif;
      /* min-width: 600px;*/
   }
 /*css header par julien */
@@ -14,17 +15,30 @@
   #div_burger_menu {
     width: 300px;
     height: 100%;
+    background-color: rgb(59, 56, 56);
+    color: white;
     border: solid 2px greenyellow;
-    border-radius: 1em;
     box-shadow: 0px 0px 15px #333;
-    background-color: white;
     position: absolute;
     top:0px;
     left: 0px;
-    
-    visibility: hidden;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   visibility: hidden;
+    text-align: center; 
   }
+  #div_burger_menu h2  {
+    margin: 10px 0px;
+  }
+
+  #div_burger_menu ul {
+    margin-bottom:50px;
+    list-style-type: none;
+
+  }
+
+  menuburger_div_logo {
+    width: 100%;
+  }
+
 
   #div_burger_menu h3 {
     border-bottom: solid 1px greenyellow;
@@ -320,12 +334,7 @@ br {
     display: none;
 }
  
- h2 {
-  width: 100%;
-  height: 100px;
-  color: black;
-  background-image: url("Images/fond_header_haut_clair.png");
-}
+
 
 
   .image_section_centrale img {
