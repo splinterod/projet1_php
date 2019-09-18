@@ -251,7 +251,10 @@ h2 {
 
   /* debut css footer par Phil */
   footer{
-    background: url("Images/fond_header.png");
+    background-color: rgb(59, 56, 56);
+    border: solid 2px greenyellow;
+    border-radius: 1em;
+    box-shadow: 0px 0px 15px #333;
     width: 100%;
     margin: auto;
     padding-top: 15px;
@@ -269,6 +272,7 @@ nav{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin: 5px 0;
 }
 
 .topbar p{
@@ -278,20 +282,28 @@ nav{
 
 }
 .topbar a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .topbar a:hover{
-    color: rgb(17, 61, 4);
+    background-image: url("Images/fond_header.png");
+    border: solid 2px greenyellow;
+    color: rgb(59, 56, 56);
+    border-radius: 1em;
+    box-shadow: 0px 0px 15px #333;
     font-size: 1.2em;
+    padding: 3px 10px;
 }
-
-address{
+.address{
     text-align: center;
-    margin-top: 80px;
     font-weight: bold;
+    color: white;
+    margin-top: 80px;
     font-size: 0.8em;
+}
+br{
+  visibility: 1;
 }
 .left{
     margin-top: 100px;
@@ -306,17 +318,14 @@ address{
 
 @keyframes animation_logo{
     0% {
-        transform: transleteY(0px);
-    }
-    50% {
-        transform: transleteY(5px);
+        transform: translateY(5px);
     }
     100% {
-        transform: translateY(10px);
+        transform: translateY(5px);
     }
 }
 
-img:hover{
+footer img:hover{
     animation: animation_logo 1s;
 }
    
