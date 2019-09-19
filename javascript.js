@@ -9,13 +9,17 @@
 
 
 function apparitionMenuBurger()
-{
-  $('#div_burger_menu').css("visibility","visible");
+ {
+ $('#div_burger_menu').css("visibility","visible");
 
-  $('#div_burger_menu').animate({left: '300px'});
- 
- 
-}
+ $('#div_burger_menu').animate({left: '300px'});
+
+
+  }
+
+
+
+
 
  document.addEventListener("click", (evt) => {
   const flyoutElement = document.getElementById("div_burger_menu");
@@ -34,7 +38,10 @@ function apparitionMenuBurger()
 
       // This is a click outside.
       
+      $('#div_burger_menu').animate({right: '0px'});
       $('#div_burger_menu').css("visibility","hidden");
+
+      
 
     //  if (TargetElmentMenu.id == "Menu_gauche") {
     //    $("#panel").slideDown("slow");

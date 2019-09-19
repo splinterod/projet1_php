@@ -14,9 +14,6 @@
 
 
 
-
-
-
   #div_burger_menu {
     width: 300px;
     height: 100%;
@@ -27,9 +24,9 @@
     position: absolute;
     top:0px;
     left: 0px;
-    visibility: hidden;
+    visibility: hidden; 
     text-align: center; 
-    transform: translate(-300px);
+    transform:translateX(-300px);
     
   }
 
