@@ -185,7 +185,7 @@
 .logo_left {
   width: 90px;
   height: auto;
-  margin: 0;
+  margin-bottom: 30px;
   text-align: center;
   
 }
@@ -211,6 +211,7 @@ p {
   text-justify:inter-word;
   margin-left:8px;
   margin-right:8px;
+  padding-top: 20px;
 }
 
 h1 {
@@ -268,6 +269,7 @@ text-align: center;
 
 .page_left {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .page_center {
@@ -397,7 +399,7 @@ footer img:hover{
 }
 
 .page_left {
-
+margin-bottom: 50px;
 }
 
 .page_center {
@@ -412,7 +414,7 @@ footer img:hover{
 }
 
 .article_left {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .article_center {
@@ -429,7 +431,7 @@ footer img:hover{
 .logo_left {
   width: 90px;
   height: auto;
-  margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
     
 }
@@ -437,14 +439,14 @@ footer img:hover{
 .logo_center {
   width: 90px;
   height: auto;
-  margin: 30px 0;
+  margin-bottom:  0px;
   text-align: center;
 }
 
 .logo_right {
   width: 90px;
   height: auto;
-  margin: 30px 0;
+  margin-top:40px;
   text-align: center;
 
 }
