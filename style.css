@@ -124,25 +124,33 @@
 
 #menuPleinePage {
     height: 50px;
-    border: solid 1px black;
+
     display:flex;
     background-color: rgb(59, 56, 56);
     color: white;
 
 }
 
+#menuPleinePage a:link {
+    color: white;
+    text-decoration:none;
+
+}
+
+
 /* affichage infos menu plaine largeur */
 .sousMenuPleineLargeur {
     width: 250px;
     text-align: center;
-    border: solid 1px black;
     line-height: 50px;
 }
 
-.sousMenuPleineLargeur:hover {
+.sousMenuPleineLargeurPageEnCours {
+    width: 250px;
+    text-align: center;
+    line-height: 50px;
     background-color: rgb(150, 156, 156);
     color: yellow;
-
 }
 
 
@@ -510,16 +518,16 @@ footer img:hover{
         margin-bottom: 30px;
     }
 
-    .left_title {
+    .title_left {
         margin-bottom: 50px;
 
     }
 
-    .center_title {
+    .title_center {
         margin-top: 0;
     }
 
-    .right_title {
+    .title_right {
 
     }
 

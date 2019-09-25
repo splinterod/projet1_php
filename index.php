@@ -1,23 +1,74 @@
 <?php
-/* fonction affickhe le menus */
-function afficheMenu () {
-    $menus = [ "accueil" , "Calcul ton Empreinte", "Eradique ton impact" , "Notre histoire" , "Mon "];
 
-    foreach ($menus as $menu) {
-        echo "<div class='sousMenuPleineLargeur'> $menu </div>";
+function affichePageTitle() {
+if ($adresse = '/index.php') { $titlePage ="Commit Tree"; }
+if ($adresse = '/calculeempreinte.php') { $titlePage ="Calcul impact CO2"; }
+if ($adresse = '/eradiqueempreinte.php') { $titlePage ="Planter un arbre"; }
+
+echo $titlePage;
+}
+
+
+/* fonction affiche le menu*/
+function afficheMenu () {
+    $menus = [ '/index.php' => "accueil" ,
+        '/calculeempreinte.php' => "Calcul ton Empreinte",
+        '/eradiqueempreinte.php' => "Eradique ton impact"];
+
+    $adresse = $_SERVER["REQUEST_URI"];
+
+    foreach ($menus as $url => $menu) {
+
+        if ($url === $adresse) {
+            echo "<div class='sousMenuPleineLargeurPageEnCours'> <a href=$url>$menu</a> </div>";
+        } else {
+
+            echo "<div class='sousMenuPleineLargeur'> <a href=$url>$menu</a> </div>";
+        }
+
+    }
+
+
+}
+
+
+/* fonction qui affiche les articles */
+function afficheArticle () {
+    $infosArticles = [
+        [ 'Images/terrain_foot.png' ,"Terrain de foot au milieu de la forêt","La déforestation : un terrain de foot toutes les 2 secondes !!!!" ,  "Lisez l'article tickethic.fr :" ,  "https://www.tickethic.fr/blog/deforestation-1-terrain-de-foot-toutes-les-2-secondes",  "1 terrain de foot toutes les 2 secondes"],
+        [ "Images/téléchargement.jpeg","Petit arbuste fraîchement planté","Nos actions réalisées" , "Tuto pour t'apprendre à planter ton arbre, Mister Green." , "https://www.youtube.com/watch?v=TbO_6O9OlX8","Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète."],
+        [ "Images/Shrek.png","Shrek and Friends", "Témoignages", "Shrek et ses amis ont replanté tout seul la forêt En Chantier pour lutter contre leurs propres émanations de CO2 et de méthane : ", "https://youtu.be/yHlOeFjxMBE", "ils en sont très fiers"],
+        [ 'Images/terrain_foot.png' ,"Terrain de foot au milieu de la forêt","La déforestation : un terrain de foot toutes les 2 secondes !!!!" ,  "Lisez l'article tickethic.fr :" ,  "https://www.tickethic.fr/blog/deforestation-1-terrain-de-foot-toutes-les-2-secondes",  "1 terrain de foot toutes les 2 secondes"],
+        [ "Images/téléchargement.jpeg","Petit arbuste fraîchement planté","Nos actions réalisées" , "Tuto pour t'apprendre à planter ton arbre, Mister Green." , "https://www.youtube.com/watch?v=TbO_6O9OlX8","Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète."],
+
+
+        ];
+    foreach ($infosArticles as $key =>  $articles ) {
+
+        if ($key === 0 or $key === 3) {
+            $positionArticle = "left";
+        }
+
+        if ($key === 1 or $key === 4) {
+            $positionArticle = "center";
+        }
+
+        if ($key === 2 or $key === 5) {
+            $positionArticle = "right";
+        }
+
+        echo "<div class='bloc_$positionArticle'>";
+            echo "<div class='page_$positionArticle'>";
+            echo "<div class='image_section_centrale'><img src=$articles[0]  alt =$articles[1]></div>";
+            echo "<div class='article_$positionArticle'>";
+            echo "<h1 class='title_$positionArticle'>$articles[2]</h1>";
+            echo "<p> $articles[3]<br> <a href=$articles[3]>$articles[4]</a></p>";
+            echo "</div></div>";
+            echo "<img src='Images/logo_commitTree.png'  class='logo_$positionArticle' alt='logo commit tree'>";
+            echo "</div>";
+
     }
 }
-
-
-/*fonction affichage article central
-function afficheArticle () {
-    $menus = [
-            "article1" =>  [ "url image" , "titrearticle" , texte , lien ],
-            "article2" =>  [ "url image" , "titrearticle" , texte , lien ],
-            "article3" => [ "url image" , "titrearticle" , texte , lien ],  ];
-
-}
- */
 
 
 
@@ -31,7 +82,7 @@ function afficheArticle () {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <title>Commit tree</title>
+    <title><?php echo affichePageTitle()  ?></title>
     
 </head>
 <body>
@@ -62,106 +113,14 @@ function afficheArticle () {
 <!-- fin section baniere, laurent-->
 
 
-<!-- debut section centrale par thierry-->
+<!-- debut section centrale : affichage des articles-->
 
     <section id="centrale_container">
 
-
-        
-            <div class="bloc_left">
-
-                <div class="page_left">
-
-                    <div class="image_section_centrale"><img src="Images/terrain_foot.png" alt ="Terrain de foot au milieu de la forêt"></div>
-
-                        <div class="article_left">
-
-                            <h1 class="left_title">La déforestation : un terrain de foot toutes les 2 secondes !!!!</h1>
-
-                            <p>Lisez l'article tickethic.fr : <br>
-                                 <a href="https://www.tickethic.fr/blog/deforestation-1-terrain-de-foot-toutes-les-2-secondes/">1 terrain de foot toutes les 2 secondes</a></p>
-
-                        </div>
-                </div>
-                        
-            <img src="Images/logo_commitTree.png"  class="logo_left" alt="logo commit tree">
-
-            </div>
-
-            <div class="bloc_center">
-
-                <div class="page_center">
-        
-                    <div class="image_section_centrale"><img src="Images/téléchargement.jpeg" alt="Petit arbuste fraîchement planté"></div>
-
-                        <div class="article_center">
-                        
-                            <h1 class="center_title">Nos actions réalisées</h1>
-                        
-                            <p>Tuto pour t'apprendre à planter ton arbre, Mister Green. <a href="https://www.youtube.com/watch?v=TbO_6O9OlX8"><br>Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète.</a></p>
-                       
-                        </div>
-                        
-                </div>
-
-                <img src="Images/logo_commitTree.png" class="logo_center" alt="logo commit tree">
-            
-            </div> 
-
-            <div class="bloc_right">
-
-                <div class="page_right">
-
-                    <div class="image_section_centrale"><img src="Images/Shrek.png" alt="Shrek and Friends"></div>
-                        
-                        <div class="article_right">
-                            
-                            <h1 class="right_title">Témoignages</h1>
-                    
-                            <p>Shrek et ses amis ont replanté tout seul la forêt "En Chantier", pour lutter contre leurs propres émanations de CO2 et de méthane : <a href="https://youtu.be/yHlOeFjxMBE">ils en sont très fiers !</a></p>
-                         
-                        </div>
-
-                </div>       
-                       
-            <img src="Images/logo_commitTree.png " class="logo_right" alt="logo commit tree">
-                        
-            </div>
-        
-               
-        
-    </section>
-
-
-    <section id="centrale_container">
-
-
-
-        <div class="bloc_center">
-
-            <div class="page_center">
-
-                <div class="image_section_centrale"><img src="Images/téléchargement.jpeg" alt="Petit arbuste fraîchement planté"></div>
-
-                <div class="article_center">
-
-                    <h1 class="center_title">Nos actions réalisées</h1>
-
-                    <p>Tuto pour t'apprendre à planter ton arbre, Mister Green. <a href="https://www.youtube.com/watch?v=TbO_6O9OlX8"><br>Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète.</a></p>
-
-                </div>
-
-            </div>
-
-            <img src="Images/logo_commitTree.png" class="logo_center" alt="logo commit tree">
-
-        </div>
-
-
-
-
+        <?php afficheArticle() ?>
 
     </section>
+
 
 
     <!-- ajout du footer -->
