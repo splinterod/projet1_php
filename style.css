@@ -86,7 +86,7 @@
   }
 
 .logo_header {
-  max-width:80%;
+  max-width:40%;
   max-height: auto;
   min-width: 150px;
   min-height: auto;
@@ -120,9 +120,35 @@
   
 }
 
+/*css du menu pleine largeur*/
+
+#menuPleinePage {
+    height: 50px;
+    border: solid 1px black;
+    display:flex;
+    background-color: rgb(59, 56, 56);
+    color: white;
+
+}
+
+/* affichage infos menu plaine largeur */
+.sousMenuPleineLargeur {
+    width: 250px;
+    text-align: center;
+    border: solid 1px black;
+    line-height: 50px;
+}
+
+.sousMenuPleineLargeur:hover {
+    background-color: rgb(150, 156, 156);
+    color: yellow;
+
+}
 
 
-/* fin css header par julien */
+
+
+    /* fin css header par julien */
 
 /* debut scetion baniere, laurent */
 #calculco
@@ -146,7 +172,7 @@
       margin-bottom: 10px;
       color:black;
       width: 100%;
-      font-family: 0.8 Georgia, 'Times New Roman', Times, serif;
+
       padding-bottom: 15px;
       
 }
@@ -391,114 +417,117 @@ footer img:hover{
 /* media query grand ecran Thierry*/
 @media screen and (min-width: 768px) {
 
-  
 
-  .header_vide {
-    width: 25%;
-  }
+    .header_vide {
+        width: 25%;
+    }
 
-#centrale_container {
-  display: flex;
-  width: 100%;
-  margin: auto;
-}
+    #centrale_container {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
 
-.bloc_left{
-  margin: 10px;
-  
-}
- 
-.bloc_center {
-  margin: 10px;
-}
+    .bloc_left {
+        margin: 10px;
+
+    }
+
+    .bloc_center {
+        margin: 10px;
+    }
 
 
-.bloc_right {
-  margin: 10px;
-}
+    .bloc_right {
+        margin: 10px;
+    }
 
-.page_left {
-margin-bottom: 50px;
-}
+    .page_left {
+        margin-bottom: 50px;
+    }
 
-.page_center {
+    .page_center {
 
-  display: flex;
-  flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column-reverse;
 
-}
+    }
 
-.page_right {
+    .page_right {
 
-}
+    }
 
-.article_left {
-  margin-bottom: 40px;
-}
+    .article_left {
+        margin-bottom: 40px;
+    }
 
-.article_center {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
+    .article_center {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
 
-}
+    }
 
-.article_right {
-  display: flex;
-  flex-direction: column;
-}
-.logo_left {
-  width: 90px;
-  height: auto;
-  margin-top: 10px;
-  text-align: center;
-    
-}
+    .article_right {
+        display: flex;
+        flex-direction: column;
+    }
 
-.logo_center {
-  width: 90px;
-  height: auto;
-  margin-bottom:  0px;
-  text-align: center;
-}
+    .logo_left {
+        width: 90px;
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
 
-.logo_right {
-  width: 90px;
-  height: auto;
-  margin-top:40px;
-  text-align: center;
+    }
 
-}
+    .logo_center {
+        width: 90px;
+        height: auto;
+        margin-bottom: 0px;
+        text-align: center;
+    }
 
-.article_section_centrale {
-  
-  text-align: center;
-}
+    .logo_right {
+        width: 90px;
+        height: auto;
+        margin-top: 40px;
+        text-align: center;
 
-h1 {
-  font-size: 23px;
-  width: 100%;
-  height: 20px;
-  color: black;
-  text-align: center;
-  margin-bottom: 30px;
-}
+    }
 
-.left_title {
-  margin-bottom: 50px;
+    .article_section_centrale {
 
-}
+        text-align: center;
+    }
 
-.center_title {
-  margin-top: 0;
-}
+    h1 {
+        font-size: 23px;
+        width: 100%;
+        height: 20px;
+        color: black;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-.right_title {
+    .left_title {
+        margin-bottom: 50px;
 
-}
-.topbar a{
-  font-size: 1em;
-}  
-.address p{
-  font-size: 0.8em;  
+    }
+
+    .center_title {
+        margin-top: 0;
+    }
+
+    .right_title {
+
+    }
+
+    .topbar a {
+        font-size: 1em;
+    }
+
+    .address p {
+        font-size: 0.8em;
+    }
 }

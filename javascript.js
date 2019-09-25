@@ -74,7 +74,7 @@ function displayWindowSize(){
   marge ="" + Math.round((w-1010) /13)+ "px";
   // Display result inside a div element
   $('header').css("margin-top",marge);
-  $('header').css("margin-bottom",marge);
+
 }
 }
  
