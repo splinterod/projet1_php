@@ -1,13 +1,15 @@
 <?php
 
-function affichePageTitle() {
-    $adresse = $_SERVER["REQUEST_URI"];
+function PageTitle() {
 
-    if ($adresse = '/index.php') { $titlePage ="Commit Tree"; }
-    if ($adresse = '/calculempreinte.php') { $titlePage ="Calcul impact CO2"; }
-    if ($adresse = '/eradiquempreinte.php') { $titlePage ="Planter un arbre"; }
+    $adresseEncours = $_SERVER["REQUEST_URI"];
 
-    echo $titlePage;
+
+    if ($adresseEncours === '/index.php') {$titlePage ="Commit Tree"; }
+    if ($adresseEncours === '/calculempreinte.php') { $titlePage ="Calcul impact CO2"; }
+    if ($adresseEncours === '/eradiquempreinte.php') { $titlePage ="Planter un arbre"; }
+
+    echo "<title> $titlePage </title>";
 }
 
 
@@ -41,7 +43,7 @@ function afficheArticle () {
         [ "Images/téléchargement.jpeg","Petit arbuste fraîchement planté","Nos actions réalisées" , "Tuto pour t'apprendre à planter ton arbre, Mister Green." , "https://www.youtube.com/watch?v=TbO_6O9OlX8","Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète."],
         [ "Images/Shrek.png","Shrek and Friends", "Témoignages", "Shrek et ses amis ont replanté tout seul la forêt En Chantier pour lutter contre leurs propres émanations de CO2 et de méthane : ", "https://youtu.be/yHlOeFjxMBE", "ils en sont très fiers"],
         [ 'Images/terrain_foot.png' ,"Terrain de foot au milieu de la forêt","La déforestation : un terrain de foot toutes les 2 secondes !!!!" ,  "Lisez l'article tickethic.fr :" ,  "https://www.tickethic.fr/blog/deforestation-1-terrain-de-foot-toutes-les-2-secondes",  "1 terrain de foot toutes les 2 secondes"],
-        [ "Images/téléchargement.jpeg","Petit arbuste fraîchement planté","Nos actions réalisées" , "Tuto pour t'apprendre à planter ton arbre, Mister Green." , "https://www.youtube.com/watch?v=TbO_6O9OlX8","Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète."],
+
 
 
     ];
