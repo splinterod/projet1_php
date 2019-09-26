@@ -131,26 +131,31 @@
 
 }
 
-#menuPleinePage a:link {
+.lienMenuBlanc {
     color: white;
     text-decoration:none;
-
 }
-
 
 /* affichage infos menu plaine largeur */
 .sousMenuPleineLargeur {
     width: 250px;
     text-align: center;
     line-height: 50px;
+    color: white;
 }
+
 
 .sousMenuPleineLargeurPageEnCours {
     width: 250px;
     text-align: center;
     line-height: 50px;
     background-color: rgb(150, 156, 156);
+
+}
+
+.lienMenuBlancPageEnCours {
     color: yellow;
+    text-decoration:none;
 }
 
 
