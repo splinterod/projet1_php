@@ -1,21 +1,8 @@
 <?php require("codeFunction.php"); ?>
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="styleP1.css" rel="stylesheet">
-    <?php echo PageTitle()  ?>
-    
-</head>
-<body>
     <!-- affichage du header -->
-    <?php require("header.html"); ?>
-    <!-- debut baniere, section laurent-->
+    <?php require("header.php"); ?>
+
 
     <div id="menuPleinePage">
         <!-- info menu dynamique -->
@@ -69,11 +56,3 @@
 
     <!-- ajout du footer -->
     <?php require("footer.html"); ?>
-
-</body>
-
-<!-- appel des fonctions javascript-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script type="text/javascript" src="javascript.js"></script>
-
-</html>

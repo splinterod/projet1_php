@@ -1,5 +1,7 @@
 <?php
 
+use function MongoDB\BSON\fromJSON;
+
 function PageTitle() {
 
     $adresseEncours = $_SERVER["REQUEST_URI"];
@@ -12,12 +14,32 @@ function PageTitle() {
     echo "<title> $titlePage </title>";
 }
 
+/* Associé la bonne page css */
+function PageStyleCss() {
+
+    $adresseEncours = $_SERVER["REQUEST_URI"];
+
+
+    if ($adresseEncours === '/index.php') {$stylePage ="style.css"; }
+    if ($adresseEncours === '/calculempreinte.php') { $stylePage ="styleP1.css"; }
+    if ($adresseEncours === '/eradiquempreinte.php') { $stylePage ="styleP2.css"; }
+
+    echo "<link href=$stylePage rel='stylesheet'>";
+
+
+}
+
+
+
+
 
 /* fonction affiche le menu*/
 function afficheMenu () {
     $menus = [ '/index.php' => "accueil" ,
         '/calculempreinte.php' => "Calcul ton Empreinte",
-        '/eradiquempreinte.php' => "Eradique ton impact"];
+        '/eradiquempreinte.php' => "Eradique ton impact",
+        '/forestdisplay.php' => "La foret pour te sauver",
+        ];
 
     $adresse = $_SERVER["REQUEST_URI"];
 

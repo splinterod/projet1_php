@@ -1,4 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fct php pour associé la bonne page de style -->
+    <?php echo PageStyleCss()  ?>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <?php echo PageTitle()  ?>
+</head>
+
+<body>
 <div id="div_burger_menu" >
         <h2>Bonjour Pickle Rick</h2>
 

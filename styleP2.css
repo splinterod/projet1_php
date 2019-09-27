@@ -6,6 +6,7 @@
 
  body {
      width:100%;
+     font-family: Roboto, 'Times New Roman', Times, serif;
     /* min-width: 600px;*/
  }
 /*css header par julien */
@@ -176,7 +177,7 @@ menuburger_div_logo {
    } 
    
    #calculco a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
     color: black;
     font-size: 1.4em;
   }
@@ -187,7 +188,7 @@ menuburger_div_logo {
       margin-bottom: 2px;
       color:black;
       width: 100%;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+
       
 }
 
@@ -204,7 +205,7 @@ menuburger_div_logo {
     margin-top: 1em;
     height: 60px;
     color:black);
-    font: 20px sans-serif;
+    font: 20px;
     width: 100%;
   }  
 
@@ -219,7 +220,7 @@ menuburger_div_logo {
   
   input, textarea {
     display: inline;
-    font: 1em sans-serif;
+    font: 1em ;
     width: 200px;
     height: 50px;
     border-radius: 1em;
@@ -403,3 +404,45 @@ menuburger_div_logo {
   }
      
   /* fin animation section footer */
+
+@media screen and (min-width: 768px) {
+
+
+    .header_vide {
+        width: 25%;
+    }
+
+    #centrale_container {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .bloc_left {
+        margin: 10px;
+
+    }
+
+    .bloc_center {
+        margin: 10px;
+    }
+
+
+    .bloc_right {
+        margin: 10px;
+    }
+
+    .page_left {
+        margin-bottom: 50px;
+    }
+
+    .page_center {
+
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .page_right {
+
+    }
