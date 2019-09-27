@@ -1,14 +1,10 @@
 <?php require("codeFunction.php"); ?>
-
+<?php require("data.php"); ?>
 
     <!-- ajout du header -->
     <?php require("header.php"); ?>
 
-    <div id="menuPleinePage">
-        <!-- info menu dynamique -->
-        <?php afficheMenu() ?>
-    </div>
-
+    <?php require("menuPleinePage.php"); ?>
 
     <!-- debut baniere, section laurent-->
     <section id="calculco">
@@ -32,7 +28,7 @@
 
     <section id="centrale_container">
 
-        <?php afficheArticle() ?>
+        <?php afficheArticle($infosArticles) ?>
 
     </section>
 

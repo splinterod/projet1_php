@@ -2,15 +2,16 @@
 
 use function MongoDB\BSON\fromJSON;
 
-function PageTitle() {
+
+function PageTitle($menus) {
 
     $adresseEncours = $_SERVER["REQUEST_URI"];
 
-
-    if ($adresseEncours === '/index.php') {$titlePage ="Commit Tree"; }
-    if ($adresseEncours === '/calculempreinte.php') { $titlePage ="Calcul impact CO2"; }
-    if ($adresseEncours === '/eradiquempreinte.php') { $titlePage ="Planter un arbre"; }
-    if ($adresseEncours === '/forestdisplay.php') { $titlePage ="Planter un arbre"; }
+    foreach ($menus as $key => $infosMenus) {
+        if ($adresseEncours === $key) {
+            $titlePage =$infosMenus[1];
+        }
+    }
 
     echo "<title> $titlePage </title>";
 }
@@ -24,33 +25,24 @@ function PageStyleCss() {
     if ($adresseEncours === '/index.php') {$stylePage ="style.css"; }
     if ($adresseEncours === '/calculempreinte.php') { $stylePage ="styleP1.css"; }
     if ($adresseEncours === '/eradiquempreinte.php') { $stylePage ="styleP2.css"; }
+    if ($adresseEncours === '/forestdisplay.php') { $stylePage ="stylesheetForest.php"; }
 
-    echo "<link href=$stylePage rel='stylesheet'>";
-
-
+    echo "<link href=$stylePage rel='stylesheet' type='text/css'>";
 }
 
-
-
-
-
 /* fonction affiche le menu*/
-function afficheMenu () {
-    $menus = [ '/index.php' => "accueil" ,
-        '/calculempreinte.php' => "Calcul ton Empreinte",
-        '/eradiquempreinte.php' => "Eradique ton impact",
-        '/forestdisplay.php' => "La foret pour te sauver",
-        ];
+function afficheMenu($menus) {
+
 
     $adresse = $_SERVER["REQUEST_URI"];
 
-    foreach ($menus as $url => $menu) {
+    foreach ($menus as $key => $infosMenus) {
 
-        if ($url === $adresse) {
-            echo "<div class='sousMenuPleineLargeurPageEnCours'> <a  href=$url class='lienMenuBlanc''>$menu</a> </div>";
+        if ($adresse === $key) {
+            echo "<div class='sousMenuPleineLargeurPageEnCours'> <a  href=$key class='lienMenuBlanc''>$infosMenus[0]</a> </div>";
         } else {
 
-            echo "<div class='sousMenuPleineLargeur'> <a href=$url class='lienMenuBlancPageEnCours'>$menu</a> </div>";
+            echo "<div class='sousMenuPleineLargeur'> <a href=$key class='lienMenuBlancPageEnCours'>$infosMenus[0]</a> </div>";
         }
 
     }
@@ -60,16 +52,8 @@ function afficheMenu () {
 
 
 /* fonction qui affiche les articles */
-function afficheArticle () {
-    $infosArticles = [
-        [ 'Images/terrain_foot.png' ,"Terrain de foot au milieu de la forêt","La déforestation : un terrain de foot toutes les 2 secondes !!!!" ,  "Lisez l'article tickethic.fr :" ,  "https://www.tickethic.fr/blog/deforestation-1-terrain-de-foot-toutes-les-2-secondes",  "1 terrain de foot toutes les 2 secondes"],
-        [ "Images/téléchargement.jpeg","Petit arbuste fraîchement planté","Nos actions réalisées" , "Tuto pour t'apprendre à planter ton arbre, Mister Green." , "https://www.youtube.com/watch?v=TbO_6O9OlX8","Ca va pas être facile et c'est salissant, mais c'est gentil pour la planète."],
-        [ "Images/Shrek.png","Shrek and Friends", "Témoignages", "Shrek et ses amis ont replanté tout seul la forêt En Chantier pour lutter contre leurs propres émanations de CO2 et de méthane : ", "https://youtu.be/yHlOeFjxMBE", "ils en sont très fiers"],
-        [ 'Images/terrain_foot.png' ,"Terrain de foot au milieu de la forêt","La déforestation : un terrain de foot toutes les 2 secondes !!!!" ,  "Lisez l'article tickethic.fr :" ,  "https://www.tickethic.fr/blog/deforestation-1-terrain-de-foot-toutes-les-2-secondes",  "1 terrain de foot toutes les 2 secondes"],
+function afficheArticle ($infosArticles) {
 
-
-
-    ];
     foreach ($infosArticles as $key =>  $articles ) {
 
         if ($key === 0 or $key === 3) {
@@ -98,5 +82,19 @@ function afficheArticle () {
 }
 
 
+/*Affichage div arbre*/
+
+function afficheArbre () {
+    for ($i=1 ; $i<=100 ;$i++) {
+
+        $idImage="img$i";
+
+        $tailleImg = mt_rand ( 50 , 250 );
+        $typeImg = mt_rand ( 0 , 3 );
+
+        echo "<div id=$idImage><img src='Images/arbre" . $typeImg . ".png' alt='un arbre' height=$tailleImg"."px  width=auto   /></div>";
+
+        /*<img src='arbre.png' alt='un arbre' height=100px   width=auto   />*/
+    }}
 
 ?>

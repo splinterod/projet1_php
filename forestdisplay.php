@@ -1,13 +1,15 @@
 <?php require("codeFunction.php"); ?>
+<?php require("data.php"); ?>
+
+<? var_dump($_POST) ?>
 
 <!-- affichage du header -->
 <?php require("header.php"); ?>
-<!-- debut baniere, section laurent-->
+<!-- definition du nombre d'arbres-->
 
-<div id="menuPleinePage">
-    <!-- info menu dynamique -->
-    <?php afficheMenu() ?>
-</div>
+<?php require("menuPleinePage.php"); ?>
+
+
 
 <div class="container">
     <div class="logoleft">
@@ -15,8 +17,8 @@
         <img class="pvr" src="Images/orig_exp.jpg" class="logo_header" alt="logo de commit tree">
     </div>
 
-    <section id="calculco">
-
+    <section id="myForest">
+        <?php echo afficheArbre(); ?>
     </section>
 
 

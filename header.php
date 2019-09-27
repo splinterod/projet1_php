@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,7 @@
     <?php echo PageStyleCss()  ?>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <?php echo PageTitle()  ?>
+    <?php echo PageTitle($menus)  ?>
 </head>
 
 <body>
@@ -60,4 +62,3 @@
         </div>
     </header>
 
-</html>

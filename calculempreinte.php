@@ -1,13 +1,11 @@
 <?php require("codeFunction.php"); ?>
+<?php require("data.php"); ?>
 
     <!-- affichage du header -->
     <?php require("header.php"); ?>
 
+<?php require("menuPleinePage.php"); ?>
 
-    <div id="menuPleinePage">
-        <!-- info menu dynamique -->
-        <?php afficheMenu() ?>
-    </div>
 
 <div class="container">
   <div class="logoleft">

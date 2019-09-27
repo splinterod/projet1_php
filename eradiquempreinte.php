@@ -1,15 +1,15 @@
-<?php require("codeFunction.php"); ?>
 
+<?php require("codeFunction.php"); ?>
+<?php require("data.php"); ?>
 
 
 
 <!-- affichage du header -->
 <?php require("header.php"); ?>
 
-<div id="menuPleinePage">
-    <!-- info menu dynamique -->
-    <?php afficheMenu() ?>
-</div>
+<?php require("menuPleinePage.php"); ?>
+
+
 
     <!-- debut baniere, section laurent-->
  <div class="container">
