@@ -156,114 +156,55 @@ menuburger_div_logo {
 
 /* fin css header par julien */
 
-  body{
-      width: 100%;
-
-    }
-
-  #calculco
- {
-  box-shadow: 0px 0px 15px rgb(221, 221, 221);
-    height:auto;
-    margin: auto;
-    width: 350px;
-    text-align: center;
-    border-radius: 1em;
-    background: rgb(243, 243, 243);
-    border-bottom: solid 2px greenyellow;
-   } 
-   
-   #calculco a {
-
-    color: black;
-    font-size: 1.4em;
-  }
-
-  h1 {
-      margin-top: 2px;
-      padding-bottom: 2px;
-      margin-bottom: 2px;
-      color:black;
-      width: 100%;
-
-      
+.logoleft {
+    display:  none;
 }
 
-  form {
-    margin: 0 auto;
-    width: 800px;
-    width: 100%;
-  
-    border-radius: 1em;
-  
-  }
-  
-  #formulaire {
-    margin-top: 1em;
-    height: 60px;
-    color:black);
-    font: 20px ;
-    width: 100%;
-  }  
+.logoright {
+    display:  none;
+}
 
-  label  {
-    display: inline;
-    margin-bottom: 6px;
-    width: 200px;
-    height: 50px;
-    font-weight: bold;
-    font-size: 0.9em;
-    }
-  
-  input, textarea {
-    display: inline;
-    font: 1em ;
-    width: 200px;
-    height: 50px;
-    border-radius: 1em;
-    box-shadow: 0px 0px 15px rgb(221, 221, 221);
-    
-  }
+ section
+ {
+    height:auto;
+    margin: auto;
+    width: 450px;
+    background: rgb(243, 243, 243);
+   }
 
- 
-  textarea {
+section div, h1 {
+      margin-top: 16px;
+      margin-bottom: 16px;
+}
 
-   height: 5em;
-   resize: vertical;
-   box-shadow: 0px 0px 15px rgb(221, 221, 221);
-  }
-  
-  .button { 
-    margin-top: 100px;
-    border-radius:12px 0 12px 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    
-   
-
-  }
-  
   input[type=submit]:hover, input[type=reset]:hover {
     background-color:rgb(252, 252, 252);
     }
 
-  .taille {
-    width: 300px;
-    margin-bottom: 15px;
+form .labelAliment {
+    width:200px;
+    padding-left: 75px;
+    display: inline-block;
+
+}
+
+form input {
+    margin-left: 75px;
+}
+
+  form .labelOui {
+      margin-left: 16px;
   }
 
-  .logoleft {
-    display:  none;
-    
-    
-  }  
-  
-  .logoright {
-    display:  none;
-   
-  
+  form .sendForm {
+      text-align: center;
+
   }
+.sendForm input {
+    margin-left: 0px;
+}
+
+
   @media screen and (min-width: 1100px) {
     .container {
       display: flex;
@@ -274,6 +215,7 @@ menuburger_div_logo {
       margin: 5px;
    
    }
+
 .logoleft {
   display:  flex;
   flex-direction: column;
@@ -292,20 +234,20 @@ menuburger_div_logo {
 
    .pvr{
 
-    box-shadow: 0px 0px 15px rgb(221, 221, 221);
+
     display:  block;
     width : 360px;
     height: 240px;
     margin-left: : 60px;
     margin-top: 60px;
     border-radius: 1em;
-    border-bottom: solid 2px greenyellow;
+
 
 
    }
    #calculco
  {
-  box-shadow: 0px 0px 15px rgb(221, 221, 221);
+
     height:auto;
     margin: none;
     width: 350px;
@@ -320,9 +262,9 @@ menuburger_div_logo {
     /* debut css footer par Phil */
     footer{
       background-color: rgb(59, 56, 56);
-      border: solid 2px greenyellow;
-      border-radius: 1em;
-      box-shadow: 0px 0px 15px #333;
+      border-top: solid 2px greenyellow;
+
+
       width: 100%;
       margin: auto;
       padding-top: 15px;

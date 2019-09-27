@@ -323,9 +323,8 @@ menuburger_div_logo {
     /* debut css footer par Phil */
     footer{
       background-color: rgb(59, 56, 56);
-      border: solid 2px greenyellow;
-      border-radius: 1em;
-      box-shadow: 0px 0px 15px #333;
+      border-top: solid 2px greenyellow;
+
       width: 100%;
       margin: auto;
       padding-top: 15px;

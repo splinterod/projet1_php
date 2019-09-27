@@ -10,6 +10,7 @@ function PageTitle() {
     if ($adresseEncours === '/index.php') {$titlePage ="Commit Tree"; }
     if ($adresseEncours === '/calculempreinte.php') { $titlePage ="Calcul impact CO2"; }
     if ($adresseEncours === '/eradiquempreinte.php') { $titlePage ="Planter un arbre"; }
+    if ($adresseEncours === '/forestdisplay.php') { $titlePage ="Planter un arbre"; }
 
     echo "<title> $titlePage </title>";
 }
