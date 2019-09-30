@@ -1,6 +1,9 @@
 <?php
 header('content-type: text/css');
-$nbArbreToDisplay= 8;
+
+foreach ( $_GET as $value) {
+    $nbArbreToDisplay = $value;
+}
 
 function idCssArbre ($nbArbre) {
 
@@ -87,7 +90,13 @@ menuburger_div_logo {
 
 }
 
-
+#InfoArbrePleinePage {
+height: 25px;
+color:white;
+text-align:center;
+background-color: grey;
+margin-top:15px;
+}
 
 .lienMenuBlanc {
     color: white;

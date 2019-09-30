@@ -22,10 +22,18 @@ function PageStyleCss() {
     $adresseEncours = $_SERVER["REQUEST_URI"];
 
 
-    if ($adresseEncours === '/index.php') {$stylePage ="style.css"; }
-    if ($adresseEncours === '/calculempreinte.php') { $stylePage ="styleP1.css"; }
-    if ($adresseEncours === '/eradiquempreinte.php') { $stylePage ="styleP2.css"; }
-    if ($adresseEncours === '/forestdisplay.php') { $stylePage ="stylesheetForest.php"; }
+    if ($adresseEncours === '/index.php') {
+        $stylePage ="style.css";
+    }
+    if ($adresseEncours === '/calculempreinte.php') {
+        $stylePage ="styleP1.css";
+    }
+    if ($adresseEncours === '/eradiquempreinte.php') {
+        $stylePage ="styleP2.css";
+    }
+    if ($adresseEncours === '/forestdisplay.php') {
+        $stylePage ="stylesheetForest.php";
+    }
 
     echo "<link href=$stylePage rel='stylesheet' type='text/css'>";
 }
