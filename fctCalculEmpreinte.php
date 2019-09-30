@@ -1,7 +1,6 @@
 <?php
 
 
-
 function formCreation (array $alimTable) {
     foreach($alimTable as $aliment=>$detailsAliments){
           echo "<div id='formulaire'>";

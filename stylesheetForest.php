@@ -1,28 +1,22 @@
 <?php
 header('content-type: text/css');
+$nbArbreToDisplay= 8;
 
+function idCssArbre ($nbArbre) {
 
-function idCssArbre () {
-    for ($i=1 ; $i<=100 ;$i++) {
+    for ($i=1 ; $i<=$nbArbre ;$i++) {
 
-        $positonLeft = mt_rand(0, 550);
-        $positonTop = mt_rand(0, 350);
-        $positionZ = mt_rand(1, 5);
-        /* $profondeur = mt_rand(-200, 200);*/
+        $positionX= mt_rand (0,400);
+        $positionY= 250-$i*300;
+        $positionZ = mt_rand (-200,0);
+        $position = $positionX ."px," . $positionY . "px," . $positionZ ."px";
 
-         $idImage = "img$i";
-         echo "#$idImage {";
-         echo "position:absolute ;";
-         echo "height:150px;";
-         echo "width:150px;";
-         echo "left:$positonLeft" . "px;";
-         echo "top:$positonTop" . "px ;";
-        /* echo "transform: translateZ($profondeur)"; */
-         echo "z-index:$i ;}";
+        $idImage="img3d$i";
+
+        echo "#$idImage {transform: translate3d(" . $position .");}";
+        echo "\n";
     }
-
-
-    }
+}
 ?>
 
 
@@ -195,20 +189,14 @@ menuburger_div_logo {
 {
 margin-top:50px;
 margin-bottom:50px;
-height:550px;
-/*border:solid 1px black;*/
-margin: none;
-width: 750px;
-display:inline-block;
+width: 800px;
+height:400px;
+perspective: 800px;
 position: relative;
 z-index:-1;
 }
 
-<?php echo idCssArbre(); ?>
-
-
-
-
+<?php echo idCssArbre($nbArbreToDisplay); ?>
 
 
   @media screen and (min-width: 1100px) {

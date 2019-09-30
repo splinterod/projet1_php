@@ -84,17 +84,19 @@ function afficheArticle ($infosArticles) {
 
 /*Affichage div arbre*/
 
-function afficheArbre () {
-    for ($i=1 ; $i<=100 ;$i++) {
+function afficheArbre ($nbArbre) {
+    for ($i=1 ; $i<=$nbArbre ;$i++) {
 
-        $idImage="img$i";
+        $idImage="img3d$i";
 
-        $tailleImg = mt_rand ( 50 , 250 );
         $typeImg = mt_rand ( 0 , 3 );
 
-        echo "<div id=$idImage><img src='Images/arbre" . $typeImg . ".png' alt='un arbre' height=$tailleImg"."px  width=auto   /></div>";
+        echo "<div id=$idImage><img src='Images/arbre" . $typeImg . ".png' alt='un arbre' height=300px  width=auto   /></div>";
 
         /*<img src='arbre.png' alt='un arbre' height=100px   width=auto   />*/
     }}
+
+
+
 
 ?>

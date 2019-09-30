@@ -10,7 +10,7 @@
           <?php formCreation($alimTable) ?>
 
         <div class="sendForm">
-          <input type="submit" value="Calculer mon empreinte"  />
+          <input type="submit" value="Calculer mon empreinte"  /
         </div>
 
       </form>

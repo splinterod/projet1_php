@@ -1,15 +1,13 @@
 <?php require("codeFunction.php"); ?>
 <?php require("data.php"); ?>
 
-<? var_dump($_POST) ?>
-
 <!-- affichage du header -->
 <?php require("header.php"); ?>
 <!-- definition du nombre d'arbres-->
 
 <?php require("menuPleinePage.php"); ?>
 
-
+<?php $nbArbreToDisplay= 8;?>
 
 <div class="container">
     <div class="logoleft">
@@ -18,7 +16,7 @@
     </div>
 
     <section id="myForest">
-        <?php echo afficheArbre(); ?>
+        <?php echo afficheArbre($nbArbreToDisplay); ?>
     </section>
 
 
