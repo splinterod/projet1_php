@@ -1,9 +1,8 @@
 <?php
 header('content-type: text/css');
 
-foreach ( $_GET as $value) {
-    $nbArbreToDisplay = $value;
-}
+$nbArbreToDisplay = $_GET['nbArbre'];
+
 
 function idCssArbre ($nbArbre) {
 
