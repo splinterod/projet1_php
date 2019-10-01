@@ -1,4 +1,4 @@
-<?php require("fctCalculEmpreinte.php"); ?>
+<?php require("function/fctCalculEmpreinte.php"); ?>
 
 <html>
  <section>

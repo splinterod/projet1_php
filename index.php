@@ -1,4 +1,4 @@
-<?php require("codeFunction.php"); ?>
+<?php require("function/codeFunction.php"); ?>
 <?php require("data.php"); ?>
 
     <!-- ajout du header -->

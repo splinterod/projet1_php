@@ -2,7 +2,11 @@
 
 
 function formCreation (array $alimTable) {
-    foreach($alimTable as $aliment=>$detailsAliments){
+
+
+
+    foreach($alimTable as $aliment => $detailsAliments){
+
           echo "<div id='formulaire'>";
           echo "<label for=$aliment class='labelAliment'>$detailsAliments[1]</label>";
           echo  "<input type='checkbox' id='scales' name=$aliment>";

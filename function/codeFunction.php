@@ -83,7 +83,7 @@ function afficheArticle ($infosArticles) {
         echo "<h1 class='title_$positionArticle'>$articles[2]</h1>";
         echo "<p> $articles[3]<br> <a href=$articles[3]>$articles[4]</a></p>";
         echo "</div></div>";
-        echo "<img src='Images/logo_commitTree.png'  class='logo_$positionArticle' alt='logo commit tree'>";
+        echo "<img src='../Images/logo_commitTree.png'  class='logo_$positionArticle' alt='logo commit tree'>";
         echo "</div>";
 
     }

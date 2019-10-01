@@ -8,7 +8,7 @@ foreach ($_POST as $value) {
 ?>
 
 
-<?php require("codeFunction.php"); ?>
+<?php require("function/codeFunction.php"); ?>
 <?php require("data.php"); ?>
 
 <!-- affichage du header -->

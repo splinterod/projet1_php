@@ -1,8 +1,8 @@
-<?php require("codeFunction.php"); ?>
+<?php require("function/codeFunction.php"); ?>
 <?php require("data.php"); ?>
 
     <!-- affichage du header -->
-    <?php require("header.php"); ?>
+<?php require("header.php"); ?>
 
 <?php require("menuPleinePage.php"); ?>
 
