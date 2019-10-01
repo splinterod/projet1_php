@@ -23,16 +23,19 @@ function PageStyleCss() {
 
 
     if ($adresseEncours === '/index.php') {
-        $stylePage ="style.css";
+        $stylePage ="stylesheet/style.css";
     }
     if ($adresseEncours === '/calculempreinte.php') {
-        $stylePage ="styleP1.css";
+        $stylePage ="stylesheet/styleP1.css";
     }
     if ($adresseEncours === '/eradiquempreinte.php') {
-        $stylePage ="styleP2.css";
+        $stylePage ="stylesheet/styleP2.css";
     }
     if ($adresseEncours === '/forestdisplay.php') {
-        $stylePage ="stylesheetForest.php";
+        $stylePage ="stylesheet/stylesheetForest.php";
+    }
+    if ($adresseEncours === '/userInfo.php') {
+        $stylePage ="stylesheet/stylesheetForest.php";
     }
 
     echo "<link href=$stylePage rel='stylesheet' type='text/css'>";

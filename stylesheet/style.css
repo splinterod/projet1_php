@@ -62,12 +62,11 @@
   /*sytyle interne au menu burger */
 
   header {
-
       width:100%;
       height: auto;
       max-height:150px;
       background-position: center;
-      background: linear-gradient(to right, rgba(255,255,255,0) 20%,  rgba(255,255,255,1) , rgba(255,255,255,0) 80% , rgba(255,255,255,1) 90% ), url("Images/fond_header_haut.jpg");
+      background: linear-gradient(to right, rgba(255,255,255,0) 20%,  rgba(255,255,255,1) , rgba(255,255,255,0) 80% , rgba(255,255,255,1) 90% ), url("../Images/fond_header_haut.jpg");
       display:flex;
       align-items:center;
       justify-content: space-around;
@@ -376,7 +375,7 @@ nav{
 }
 
 .topbar a:hover{
-    background-image: url("Images/fond_header.png");
+    background-image: url("../Images/fond_header.png");
     border: solid 2px greenyellow;
     color: rgb(59, 56, 56);
     border-radius: 1em;

@@ -1,12 +1,36 @@
+<?php
+header('content-type: text/css');
+
+$nbArbreToDisplay = $_GET['nbArbre'];
+
+
+function idCssArbre ($nbArbre) {
+
+    for ($i=1 ; $i<=$nbArbre ;$i++) {
+
+        $positionX= mt_rand (0,400);
+        $positionY= 250-$i*300;
+        $positionZ = mt_rand (-200,0);
+        $position = $positionX ."px," . $positionY . "px," . $positionZ ."px";
+
+        $idImage="img3d$i";
+
+        echo "#$idImage {transform: translate3d(" . $position .");}";
+        echo "\n";
+    }
+}
+?>
+
+
 *{
-  box-sizing: border-box;
+    box-sizing: border-box;
   margin:0px;
   padding:0px;
  }
 
- body {
-     width:100%;
-     font-family: Roboto, 'Times New Roman', Times, serif;
+body {
+    width:100%;
+    font-family: Roboto, 'Times New Roman', Times, serif;
     /* min-width: 600px;*/
  }
 /*css header par julien */
@@ -65,7 +89,13 @@ menuburger_div_logo {
 
 }
 
-
+#InfoArbrePleinePage {
+height: 25px;
+color:white;
+text-align:center;
+background-color: grey;
+margin-top:15px;
+}
 
 .lienMenuBlanc {
     color: white;
@@ -97,30 +127,30 @@ menuburger_div_logo {
 
  header {
 
-     width:100%;
-     height: auto;
-     max-height:150px;
+    width:100%;
+    height: auto;
+    max-height:150px;
      background-position: center;
-     background: linear-gradient(to right, rgba(255,255,255,0) 20%,  rgba(255,255,255,1) , rgba(255,255,255,0) 80% , rgba(255,255,255,1) 90% ), url("Images/fond_header_haut.jpg");
+     background: linear-gradient(to right, rgba(255,255,255,0) 20%,  rgba(255,255,255,1) , rgba(255,255,255,0) 80% , rgba(255,255,255,1) 90% ), url("../Images/fond_header_haut.jpg");
      display:flex;
      align-items:center;
      justify-content: space-around;
  }
- 
+
  header div {
-   width: 20%;
-   height: auto;
-   
-   text-align: center;
-   
+    width: 20%;
+    height: auto;
+
+    text-align: center;
+
  }
 
  .header_vide {
-   width: 10px;
+    width: 10px;
  }
 
 .logo_header {
- max-width:40%;
+    max-width:40%;
  max-height: auto;
  min-width: 150px;
  min-height: auto;
@@ -135,11 +165,9 @@ menuburger_div_logo {
 
 #header_user_info
 {
- 
- 
- text-align: center;
+    text-align: center;
  font-weight: bold;
- 
+
 }
 
 #header_logo_username {
@@ -148,10 +176,10 @@ menuburger_div_logo {
 }
 
 .div_usr_infos {
- color: black;
- width: 100%;
- font-weight: bold;
- 
+    color: black;
+    width: 100%;
+    font-weight: bold;
+
 }
 
 /* fin css header par julien */
@@ -164,104 +192,64 @@ menuburger_div_logo {
     display:  none;
 }
 
- section
- {
-    height:auto;
-    margin: auto;
-    width: 450px;
-    background: rgb(243, 243, 243);
-   }
-
-section div, h1 {
-      margin-top: 16px;
-      margin-bottom: 16px;
+/*affichage de la foret */
+#myForest
+{
+margin-top:50px;
+margin-bottom:50px;
+width: 800px;
+height:400px;
+perspective: 800px;
+position: relative;
+z-index:-1;
 }
 
-  input[type=submit]:hover, input[type=reset]:hover {
-    background-color:rgb(252, 252, 252);
-    }
-
-form .labelAliment {
-    width:200px;
-    padding-left: 75px;
-    display: inline-block;
-
-}
-
-form input {
-    margin-left: 75px;
-}
-
-  form .labelOui {
-      margin-left: 16px;
-  }
-
-  form .sendForm {
-      text-align: center;
-
-  }
-.sendForm input {
-    margin-left: 0px;
-}
+<?php echo idCssArbre($nbArbreToDisplay); ?>
 
 
   @media screen and (min-width: 1100px) {
     .container {
-      display: flex;
-      flex-direction: row;
+        display: flex;
+        flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: flex-start;
       margin: 5px;
-   
+
    }
 
 .logoleft {
-  display:  flex;
-  flex-direction: column;
+        display:  flex;
+        flex-direction: column;
   align-items: space-between;
- 
-  
-}  
 
-.logoright {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
- 
 
 }
 
-   .pvr{
+.logoright {
+        display: flex;
+        flex-direction: column;
+  align-items: space-between;
 
 
+}
+
+.pvr{
     display:  block;
     width : 360px;
     height: 240px;
     margin-left: : 60px;
     margin-top: 60px;
     border-radius: 1em;
+ }
 
 
 
-   }
-   #calculco
- {
-
-    height:auto;
-    margin: none;
-    width: 350px;
-    text-align: center;
-    border-radius: 1em;
-    background: rgb(243, 243, 243);
-   }
-
-
-  }
+}
 
     /* debut css footer par Phil */
     footer{
-      background-color: rgb(59, 56, 56);
+    background-color: rgb(59, 56, 56);
       border-top: solid 2px greenyellow;
 
 
@@ -271,12 +259,12 @@ form input {
       padding-bottom: 15px;
   }
   nav{
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
   .contact{
-      width: 100%;
-  }
+    width: 100%;
+}
   .topbar
   {
       width: 100%;
@@ -284,20 +272,20 @@ form input {
       justify-content: space-around;
       margin: 5px 0;
   }
-  
+
   .topbar p{
-      display: inline;
-      margin-right: 20px;
+    display: inline;
+    margin-right: 20px;
       text-align: center;
-  
+
   }
   .topbar a{
-      color: white;
-      text-decoration: none;
+    color: white;
+    text-decoration: none;
   }
-  
+
   .topbar a:hover{
-      background-image: url("Images/fond_header.png");
+    background-image: url("Images/fond_header.png");
       border: solid 2px greenyellow;
       color: rgb(59, 56, 56);
       border-radius: 1em;
@@ -306,7 +294,7 @@ form input {
       padding: 3px 10px;
   }
   .address{
-      text-align: center;
+    text-align: center;
       font-weight: bold;
       color: white;
       margin-top: 80px;
@@ -314,34 +302,34 @@ form input {
   }
   br{
     visibility: 1;
-  }
+}
   .left{
-      margin-top: 100px;
-      margin-left: 15px;    
+    margin-top: 100px;
+      margin-left: 15px;
   }
   .right{
-      margin-top: 100px;
+    margin-top: 100px;
       margin-right: 15px;
   }
-  
+
   /* fin section footer ,suite animation section footer */
-  
+
   @keyframes animation_logo{
-      0% {
-          transform: translateY(0px);
+    0% {
+        transform: translateY(0px);
       }
       50% {
-          transform: translateY(5px);
+        transform: translateY(5px);
       }
       100% {
-          transform: translateY(5px);
+        transform: translateY(5px);
       }
   }
-  
+
   footer img:hover{
-      animation: animation_logo 1s;
+    animation: animation_logo 1s;
   }
-     
+
   /* fin animation section footer */
 @media screen and (min-width: 768px) {
 
@@ -357,31 +345,31 @@ form input {
     }
 
     .bloc_left {
-        margin: 10px;
+    margin: 10px;
 
     }
 
     .bloc_center {
-        margin: 10px;
+    margin: 10px;
     }
 
 
     .bloc_right {
-        margin: 10px;
+    margin: 10px;
     }
 
     .page_left {
-        margin-bottom: 50px;
+    margin-bottom: 50px;
     }
 
     .page_center {
 
-        display: flex;
-        flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column-reverse;
 
     }
 
     .page_right {
 
-    }
+}
 }
