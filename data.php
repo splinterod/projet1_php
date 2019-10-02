@@ -34,6 +34,20 @@ if (($handle = fopen("data/articles.csv", 'r')) !== FALSE)
     fclose($handle);
 }
 
+
+/* create table menu to url*/
+
+$urlToStyle = array();
+if (($handle = fopen("data/urlToStyle.csv", 'r')) !== FALSE)
+{
+    while (($row = fgetcsv($handle, 1000, ",")) !== FALSE)
+    {
+        $urlToStyle[] = array ($row[0],$row[1]) ;
+    }
+    fclose($handle);
+}
+
+
 /*
 
 $infosArticles2 = [

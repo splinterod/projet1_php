@@ -2,7 +2,7 @@
 
 <html>
  <section>
-    <h1>Empreinte de Carbone de l'alimentation</h1>
+    <h5>Empreinte de Carbone de l'alimentation</h5>
      <div>En fonction de son mode d'alimentation</div>
 
       <form action="forestdisplay.php" method="POST">

@@ -1,10 +1,7 @@
 <?php
-
 use function MongoDB\BSON\fromJSON;
 
-
 function PageTitle($menus) {
-
     $adresseEncours = $_SERVER["REQUEST_URI"];
 
     foreach ($menus as $key => $infosMenus) {
@@ -17,25 +14,16 @@ function PageTitle($menus) {
 }
 
 /* Associé la bonne page css */
-function PageStyleCss() {
+function PageStyleCss($urlToStyle) {
+
+
 
     $adresseEncours = $_SERVER["REQUEST_URI"];
 
-
-    if ($adresseEncours === '/index.php') {
-        $stylePage ="stylesheet/style.css";
-    }
-    if ($adresseEncours === '/calculempreinte.php') {
-        $stylePage ="stylesheet/styleP1.css";
-    }
-    if ($adresseEncours === '/eradiquempreinte.php') {
-        $stylePage ="stylesheet/styleP2.css";
-    }
-    if ($adresseEncours === '/forestdisplay.php') {
-        $stylePage ="stylesheet/stylesheetForest.php";
-    }
-    if ($adresseEncours === '/userInfo.php') {
-        $stylePage ="stylesheet/stylesheetForest.php";
+    foreach ($urlToStyle as $item) {
+        if ($adresseEncours === $item[0]) {
+            $stylePage =$item[1];
+        }
     }
 
     echo "<link href=$stylePage rel='stylesheet' type='text/css'>";

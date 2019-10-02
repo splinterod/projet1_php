@@ -22,6 +22,9 @@ foreach ($_POST as $value) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/footer.css">
+    <link rel="stylesheet" href="stylesheet/styleheader.css">
     <?php echo "<link href=stylesheet/stylesheetForest.php?nbArbre=" . $nbArbreToDisplay . " rel='stylesheet' type='text/css'>" ?>
     <?php echo PageTitle($menus)  ?>
 </head>
@@ -80,28 +83,31 @@ foreach ($_POST as $value) {
 
 
 
-<div id='InfoArbrePleinePage'>
+<div class="col-12 p-3 mb-2 bg-info text-white text-center">
     <?php echo "<div>Pour couvrir ton empreinte Carbone, il te faut " . $nbArbreToDisplay . " arbres!!!</div>"; ?>
 </div>
 
 
-<div class="container">
-    <div class="logoleft">
-        <img class="pvr" src="Images/planete_verre.jpg" class="logo_header" alt="logo de commit tree">
-        <img class="pvr" src="Images/orig_exp.jpg" class="logo_header" alt="logo de commit tree">
-    </div>
+<div class="">
+        <div class="row centrePadding">
+        <div class="col-3">
+            <img class="pvr" src="Images/planete_verre.jpg" class="logo_header" alt="logo de commit tree">
+            <img class="pvr" src="Images/orig_exp.jpg" class="logo_header" alt="logo de commit tree">
+        </div>
 
 
 
-    <section id="myForest">
-        <?php echo afficheArbre($nbArbreToDisplay); ?>
-    </section>
+        <section class="col-6" id="myForest">
+            <?php echo afficheArbre($nbArbreToDisplay); ?>
+        </section>
 
 
-    <div class="logoright">
-        <img class="pvr" src="Images/Planetet.jpg" class="logo_header" alt="logo de commit tree">
-        <img class="pvr" src="Images/Planpb.jpg" class="logo_header" alt="logo de commit tree">
-    </div>
+        <div class="col-3">
+            <img class="pvr" src="Images/Planetet.jpg" class="logo_header" alt="logo de commit tree">
+            <img class="pvr" src="Images/Planpb.jpg" class="logo_header" alt="logo de commit tree">
+        </div>
+
+        </div>
 </div>
 
 

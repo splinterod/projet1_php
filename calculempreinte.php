@@ -7,19 +7,30 @@
 <?php require("menuPleinePage.php"); ?>
 
 
-<div class="container">
-  <div class="logoleft">
-  <img class="pvr" src="Images/planete_verre.jpg" class="logo_header" alt="logo de commit tree">
-  <img class="pvr" src="Images/orig_exp.jpg" class="logo_header" alt="logo de commit tree">
+
+
+
+<div class="">
+    <div class="row centrePadding">
+        <div class="col-3">
+            <img class="pvr " src="Images/planete_verre.jpg" class="logo_header" alt="logo de commit tree">
+            <img class="pvr" src="Images/orig_exp.jpg" class="logo_header" alt="logo de commit tree">
+        </div>
+
+
+
+        <section class="col-5" id="myForest">
+            <?php require("form.php"); ?>
+        </section>
+
+
+        <div class="col-3">
+            <img class="pvr" src="Images/Planetet.jpg" class="logo_header" alt="logo de commit tree">
+            <img class="pvr" src="Images/Planpb.jpg" class="logo_header" alt="logo de commit tree">
+        </div>
+
+    </div>
 </div>
-
-    <?php require("form.php"); ?>
-
-    <div class="logoright">
-    <img class="pvr" src="Images/Planetet.jpg" class="logo_header" alt="logo de commit tree">
-    <img class="pvr" src="Images/Planpb.jpg" class="logo_header" alt="logo de commit tree">
-  </div>
-  </div>
 
 
     <!-- ajout du footer -->

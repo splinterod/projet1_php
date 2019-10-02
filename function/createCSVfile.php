@@ -1,6 +1,4 @@
 <?php
-require("codeFunction.php");
-require("data.php");
 
 $alimTable = [
     'alcool' => ['alimentation', 'Alcools', 145 ],
@@ -18,15 +16,14 @@ $alimTable = [
     'volaille' => ['alimentation', 'Volailles' ,  109 ]
 ];
 
-
-$fp = fopen('alimTable.csv', 'w');
+$fp = fopen('fihcierARemplir.csv', 'w');
+var_dump($fp);
 
 foreach ($alimTable as $key => $infos) {
+    fputcsv($fp,[$key]);
     fputcsv($fp, $infos );
     echo "prout";
 }
-
-
 
 fclose($fp);
 

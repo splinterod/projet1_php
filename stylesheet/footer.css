@@ -1,0 +1,12 @@
+/* debut css footer par Phil */
+footer{
+    background-color: rgb(59, 56, 56);
+    border-top: solid 2px greenyellow;
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.6em;
+}
+
+

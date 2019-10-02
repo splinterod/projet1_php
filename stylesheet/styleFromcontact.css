@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    width:100%;
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    /* min-width: 600px;*/
+}
+
+/*div du burger menu */
+
+
+
+
+.pvr{
+    display:  block;
+    width : 100%;
+    height: auto;
+    border-radius: 1em;
+}
+
+
+.centrePadding {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom:40px
+}
