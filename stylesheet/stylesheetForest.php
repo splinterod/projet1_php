@@ -9,7 +9,7 @@ function idCssArbre ($nbArbre) {
     for ($i=1 ; $i<=$nbArbre ;$i++) {
 
         $positionX= mt_rand (0,400);
-        $positionY= 450-$i*300;
+        $positionY= 200-$i*295;
         $positionZ = mt_rand (-400,0);
         $position = $positionX ."px," . $positionY . "px," . $positionZ ."px";
 
@@ -41,8 +41,8 @@ body {
 {
 margin-top:50px;
 margin-bottom:50px;
-width: 800px;
-height:400px;
+width: 700px;
+height:600px;
 perspective: 800px;
 position: relative;
 z-index:-1;
