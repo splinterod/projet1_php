@@ -17,7 +17,7 @@
 
 <body>
 <div id="div_burger_menu" >
-        <h2>Bonjour Pickle Rick</h2>
+        <h2><?php if($_SESSION["numUser"]!="") "Bonjour " . $_SESSION["numUser"] ?></h2>
 
         <h3>Mon compte</h3>
         <ul>

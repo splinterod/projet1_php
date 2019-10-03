@@ -19,7 +19,7 @@
 
 
 
-        <section class="col-5" id="myForest">
+        <section class="col-6" id="myForest">
             <?php require("form.php"); ?>
         </section>
 

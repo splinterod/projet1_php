@@ -12,6 +12,7 @@
     visibility: hidden;
     text-align: center;
     transform:translateX(-300px);
+    z-index:1;
 
 }
 
@@ -102,7 +103,7 @@ header div {
 
 .logo_header {
     max-width:40%;
-    max-height: auto;
+    max-height:auto;
     min-width: 150px;
     min-height: auto;
 }

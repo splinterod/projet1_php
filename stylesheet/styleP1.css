@@ -12,13 +12,7 @@
 
 /* fin css header par julien */
 
-.logoleft {
-    display:  none;
-}
 
-.logoright {
-    display:  none;
-}
 
  section
  {
@@ -65,7 +59,7 @@ form input {
           display: block;
           width: 360px;
           height: 240px;
-          margin-left:: 60px;
+          margin-left: 60px;
           margin-top: 60px;
           border-radius: 1em;
           border-bottom: solid 2px greenyellow;
