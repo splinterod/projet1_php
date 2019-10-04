@@ -38,7 +38,7 @@ function apparitionMenuBurger()
 
       // This is a click outside.
       
-      $('#div_burger_menu').animate({right: '0px'});
+      $('#div_burger_menu').animate({left: '0px'});
       $('#div_burger_menu').css("visibility","hidden");
 
       
@@ -73,8 +73,8 @@ function displayWindowSize(){
 } else {
   marge ="" + Math.round((w-1010) /13)+ "px";
   // Display result inside a div element
-  $('header').css("margin-top",marge);
-  $('header').css("margin-bottom",marge);
+  //$('header').css("margin-top",marge);
+
 }
 }
  

@@ -1,0 +1,304 @@
+* {
+   box-sizing: border-box;
+   margin:0px;
+   padding:0px;
+  }
+
+  body {
+      width:100%;
+      font-family: Roboto, 'Times New Roman', Times, serif;
+     /* min-width: 600px;*/
+  }
+
+
+/* debut scetion baniere, laurent */
+#calculco
+ {
+  
+    box-shadow: 0px 0px 15px rgb(221, 221, 221);
+    height:200px;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom : 25px;
+    border-bottom: solid 2px greenyellow;
+   }
+
+  #calculco a {
+    text-decoration: none;
+  }
+
+  h1 {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color:black;
+      width: 100%;
+
+      padding-bottom: 15px;
+      
+}
+  .button { 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius:12px 0 12px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:12px 0 12px 0;
+    padding-top: 5px;
+    text-decoration: none;
+ 
+  }
+
+  input[type=submit]:hover, input[type=reset]:hover {
+    background-color:rgb(252, 252, 252);
+
+    }
+
+    input {
+      display: inline;
+      font: 1em;
+      width: 200px;
+      height: 50px;
+      border-radius: 1em;
+      box-shadow:2px 2px 3px rgb(5, 5, 5);
+      
+ 
+      
+    }
+
+  @media screen and (min-width: 768px) {
+    #calculco {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 5px;
+     
+   
+    }
+  }
+    
+
+
+
+  /* fin SECTION BANIERE */
+
+  /* Début de section CENTRALE par thierry */
+
+.logo_left {
+  width: 90px;
+  height: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  
+}
+
+.logo_center {
+  width: 90px;
+  height: auto;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.logo_right {
+  width: 90px;
+  height: auto;
+  margin: 30px 0;
+  text-align: center;
+
+}
+
+p {
+  text-align: center;
+  text-justify:inter-word;
+
+
+}
+
+h1 {
+  font-size: 23px;
+  width: 100%;
+  height: 20px;
+  color: black;
+  text-align: center;
+}
+
+
+.left_title {
+  margin-bottom: 50px; 
+
+}
+
+.center_title {
+
+}
+
+.right_title {
+
+}
+
+#centrale_container {
+  width: 100%;
+ margin-top:60px;
+}
+
+.image_section_centrale {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+}
+
+.image_section_centrale img {
+  width: 100%;
+}
+
+.bloc_left{
+  width: 100%;
+  text-align: center;
+}
+
+.bloc_center {
+  width: 100%;
+text-align: center;
+}
+
+.bloc_right {
+  width: 100%;
+  text-align: center;
+}
+
+.page_left {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.page_center {
+  width: 100%;
+}
+
+.page_right {
+  width: 100%;
+}
+
+/* Fin css section CENTRALE par thierry */
+
+
+
+/* media query grand ecran Thierry*/
+@media screen and (min-width: 768px) {
+
+
+    .header_vide {
+        width: 25%;
+    }
+
+    #centrale_container {
+        display: flex;
+        width: 100%;
+        margin-top:60px;
+    }
+
+    .bloc_left {
+        margin: 10px;
+
+    }
+
+    .bloc_center {
+        margin: 10px;
+    }
+
+
+    .bloc_right {
+        margin: 10px;
+    }
+
+    .page_left {
+        margin-bottom: 50px;
+    }
+
+    .page_center {
+
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .page_right {
+
+    }
+
+    .article_left {
+        margin-bottom: 40px;
+    }
+
+    .article_center {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+
+    }
+
+    .article_right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo_left {
+        width: 90px;
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
+
+    }
+
+    .logo_center {
+        width: 90px;
+        height: auto;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    .logo_right {
+        width: 90px;
+        height: auto;
+        margin-top: 40px;
+        text-align: center;
+
+    }
+
+    .article_section_centrale {
+
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 23px;
+        width: 100%;
+        height: 20px;
+        color: black;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .title_left {
+        margin-bottom: 50px;
+
+    }
+
+    .title_center {
+        margin-top: 0;
+    }
+
+    .title_right {
+
+    }
+
+    .topbar a {
+        font-size: 1em;
+    }
+
+    .address p {
+        font-size: 0.8em;
+    }
+}
