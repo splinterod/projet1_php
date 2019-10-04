@@ -1,3 +1,6 @@
+<?php
+session_start(); ?>
+
 <?php require("function/codeFunction.php"); ?>
 <?php require("data.php"); ?>
 
@@ -71,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (!empty($_POST))
         {
-            require_once 'connectCommitTree.php';
+            require_once 'connectBDD.php';
             $pdo = new \PDO(DSN, USER, PASS);
 
 
@@ -85,7 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $pdo=null;
 
-
+            /* on mets le nom du user */
+            $_SESSION["numUser"]=$prenom;
 
             header('Location: calculempreinte.php');
             exit;
@@ -150,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
                         <div class="col-12 d-flex justify-content-center">
-                            <input type="submit" value="Calculer mon empreinte">
+                            <input type="submit" value="S'inscrire">
                         </div>
 
                 </form>

@@ -1,4 +1,16 @@
-<!-- >On recupere les infos et on calcule le bilan carbone -->
+<?php
+session_start();
+
+if ($_SESSION["numUser"]=== "") {
+
+    echo '<script type="text/javascript">';
+    echo 'alert("Vous devez etre connecté");';
+    echo 'window.location.href = "userInfo.php";';
+    echo '</script>';
+
+
+};
+?>
 
 <?php
 $nbArbreToDisplay=0;
@@ -31,7 +43,7 @@ foreach ($_POST as $value) {
 
 <body>
 <div id="div_burger_menu" >
-    <h2>Bonjour Pickle Rick</h2>
+    <h2><?php if($_SESSION["numUser"]!="") {echo "Bonjour " . $_SESSION["numUser"]; } else { echo "bonjour";} ?></h2>
 
     <h3>Mon compte</h3>
     <ul>
@@ -72,7 +84,7 @@ foreach ($_POST as $value) {
     </div>
     <div>
         <div class="div_usr_infos"><img src="Images/header_logo_username.png" id="header_logo_username" alt="logo username"></div>
-        <div class="div_usr_infos">Pickle Rick</div>
+        <div class="div_usr_infos"><?php if($_SESSION["numUser"]!="") {echo "Bonjour " . $_SESSION["numUser"]; } else { echo "<a href='connectTocommit.php'>connexion<a>";} ?></div>
         <div class="div_usr_infos">420 trees</div>
     </div>
 </header>
@@ -84,7 +96,7 @@ foreach ($_POST as $value) {
 
 
 <div class="col-12 p-3 mb-2 bg-info text-white text-center">
-    <?php echo "<div>Pour couvrir ton empreinte Carbone, il te faut " . $nbArbreToDisplay . " arbres!!!</div>"; ?>
+    <?php echo "<div>" . $_SESSION["numUser"] . "   Pour couvrir ton empreinte Carbone, il te faut " . $nbArbreToDisplay . " arbres!!!</div>"; ?>
 </div>
 
 

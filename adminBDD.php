@@ -1,18 +1,18 @@
 <?php
 
-require_once 'connectCommitTree.php';
+require_once 'connectBDD.php';
 $pdo = new \PDO(DSN, USER, PASS);
 
-var_dump($_SESSION);
+/* var_dump($_SESSION); */
 
-/*Efface un indesirale de la base
+/*Efface un indesirale de la base*/
 
-$query = "DELETE FROM nomuser WHERE id=2";
+$query = "DELETE FROM nomuser WHERE id=6";
 $statement = $pdo->query($query);
-*/
+
 
 $query = "SELECT * FROM nomuser";
 $statement = $pdo->query($query);
-$users = $statement->fetch();
+$users = $statement->fetchAll();
 
 var_dump($users);

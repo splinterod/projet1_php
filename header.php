@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
 
 <body>
 <div id="div_burger_menu" >
-        <h2><?php if($_SESSION["numUser"]!="") "Bonjour " . $_SESSION["numUser"] ?></h2>
+        <h2><?php if($_SESSION["numUser"]!="") {echo "Bonjour " . $_SESSION["numUser"]; } else { echo "bonjour";} ?></h2>
 
         <h3>Mon compte</h3>
         <ul>
@@ -58,7 +60,7 @@
         </div>
         <div>
             <div class="div_usr_infos"><img src="Images/header_logo_username.png" id="header_logo_username" alt="logo username"></div>
-            <div class="div_usr_infos">Pickle Rick</div>
+            <div class="div_usr_infos"><?php if($_SESSION["numUser"]!="") {echo "Bonjour " . $_SESSION["numUser"]; } else { echo "<a href='connectToCommit.php'>connexion<a>";} ?></div>
             <div class="div_usr_infos">420 trees</div>
         </div>
     </header>

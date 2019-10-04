@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+
+if ($_SESSION["numUser"]=== "") {
+
+
+    echo '<script type="text/javascript">';
+    echo 'alert("Vous devez etre connecté");';
+    echo 'window.location.href = "userInfo.php";';
+    echo '</script>';
+
+
+};
+
+?>
+
 <?php require("function/codeFunction.php"); ?>
 <?php require("data.php"); ?>
 
