@@ -142,14 +142,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <div class="col-12 d-flex">
                             <label for=password1 class="col-5 mb-2">Mot de passe</label>
-                            <input type='text' id='scales' name=password1 class="col-5 mb-2">
+                            <input type='password' id='scales' name=password1 class="col-5 mb-2">
                         </div>
                         <div class="col-6 offset-5 <?php if (empty($errPass)) echo "d-none"; ?>"><span
                                     ><?php if (isset($errPass)) echo $errPass; ?></span></div>
 
                         <div class="col-12 d-flex">
                             <label for=password2 class="col-5 mb-2">Repetez Mot de Passe</label>
-                            <input type='text' id='scales' name=password2 class="col-5 mb-2">
+                            <input type='password' id='scales' name=password2 class="col-5 mb-2">
                         </div>
 
 

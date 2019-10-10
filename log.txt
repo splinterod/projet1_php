@@ -1,0 +1,20 @@
+Tous les commits depuis la pris en main perso
+
+   - conectTocommit.php add with connection to bdd and possiblity to a user to connect to this account
+  - creation of the bdd commitTree and save the info for each creation of a new user
+  -  modificaiton of postion display of forest and y position of each tree
+ -   Modification of css in central section ( css to bootstrap) and creation of new csv file (utltostyleshhet) with associate function to create table
+  -  !creation of directory for stylesheet and upadtae of relation between sylesheet and Images, and betwwen pages and stylesheet
+  -  Creation of csv files for data, function in data.php to transform csv in tables, and reorganization of data and function in new directory
+ -   Last validation of form to display forest
+  - Liaison entre form et forestdisplay: need not use the header.php due to info to send at stylesheetForest.php
+  -  Modification of display of random trees on forestdisplay.php (3D transform) and modification of php fucntion on stylesheetForest.php
+  -  Creation of the forest display with 2 fct php ( add div in html and add css infos for each div)
+  - Creation of dynamique form for carbon footprint calculation (page calculeemepreinte.php and fctCalculEmpreinte.php)
+  - modif of header.html to header.php with function to add good stylesheet
+  - correction on fucntion to add dynmaique page title
+ - New codeFunction.php with all the needed fucntion, correction on css for empreinte.html and eradique.html
+- creation de la fonction affichage section centrale, de la fonction changement titre et affichage de couleur differente du menu co  à la page en cours
+- creation de la fonction affichage menu pleine largeur dynamique
+- footer et header en include php dans index.php , calcul.php et eradique.php
+

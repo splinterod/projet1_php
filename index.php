@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION["numUser"])){
 $_SESSION["numUser"]=""; }
 
+
 ?>
 
 <?php require("function/codeFunction.php"); ?>
