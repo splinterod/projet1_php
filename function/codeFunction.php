@@ -2,7 +2,12 @@
 use function MongoDB\BSON\fromJSON;
 
 function PageTitle($menus) {
-    $adresseEncours = $_SERVER["REQUEST_URI"];
+    if($_SERVER["REQUEST_URI"]=='/'){
+        $adresseEncours='/index.php' ;
+    } else {
+        $adresseEncours = $_SERVER["REQUEST_URI"];
+    }
+
 
     foreach ($menus as $key => $infosMenus) {
         if ($adresseEncours === $key) {
@@ -16,9 +21,11 @@ function PageTitle($menus) {
 /* Associé la bonne page css */
 function PageStyleCss($urlToStyle) {
 
-
-
-    $adresseEncours = $_SERVER["REQUEST_URI"];
+    if($_SERVER["REQUEST_URI"]=='/'){
+        $adresseEncours='/index.php' ;
+    } else {
+        $adresseEncours = $_SERVER["REQUEST_URI"];
+    }
 
     foreach ($urlToStyle as $item) {
         if ($adresseEncours === $item[0]) {
